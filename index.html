@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Zemi - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./custom.css"> <!-- added for consistent alignment -->
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li> <!-- changed from href="#home" -->
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<header>
+  <h1 class="gradient-text">Zemi's Website<span>Gaming & Streaming</span></h1>
+</header>
+<main>
+  <div class="content scroll-animate">
+    <div class="tiles">
+      <div style="--r: 45deg" class="tile"></div>
+      <div style="--r: 275deg" class="tile"></div>
+      <div style="--r: 190deg" class="tile"></div>
+      <div style="--r: 45deg" class="tile"></div>
+    </div>
+    <section class="section--one scroll-animate">
+      <article>
+        <div class="title-wrap">
+          <h2>Rocket League Pro Ambitions.</h2>
+        </div>
+        <hr>
+        <div class="content-wrap">
+          <p>
+            Follow my journey as I dominate Rocket League with professional insights, high-level gameplay, and cutting-edge strategies.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="title-wrap">
+          <h2>Stream Like a Champion.</h2>
+        </div>
+        <hr>
+        <div class="content-wrap">
+          <p>
+            Tune in as I share live streams, expert tips, and behind-the-scenes action from my pro streaming career.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="title-wrap">
+          <h2>Competitive Gaming & Fun.</h2>
+        </div>
+        <hr>
+        <div class="content-wrap">
+          <p>
+            While Rocket League is my main arena, I also enjoy intense sessions in Call of Duty and Rainbow Six for fun.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="title-wrap">
+          <h2>Join the Movement.</h2>
+        </div>
+        <hr>
+        <div class="content-wrap">
+          <p>
+            Be part of a dynamic community where pro gaming meets engaging streams and enthusiastic discussions.
+          </p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <section class="section--two scroll-animate"></section>
+  <section class="section--three scroll-animate"></section>
+  <section class="section--four scroll-animate"></section>
+  <section class="section--five centered scroll-animate"></section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const scrollElems = document.querySelectorAll('.scroll-animate');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('scrolled');
+          }
+        });
+      }, { threshold: 0.5 }); // Use a threshold of 50%
+      scrollElems.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

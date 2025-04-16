@@ -1,0 +1,8 @@
+main {
+  max-width: 800px; /* Expand the container width */
+  margin: 0 auto;
+}
+
+main section, main article {
+  max-width: 100%; /* Allow sections and articles to use full container width */
+}

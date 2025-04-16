@@ -1,0 +1,60 @@
+/* Global text centering */
+body, * {
+    text-align: center !important;
+}
+
+@keyframes advancedFadeIn {
+  0% { opacity: 0; transform: perspective(500px) rotateX(15deg) translateY(-30px); }
+  100% { opacity: 1; transform: perspective(500px) rotateX(0deg) translateY(0); }
+}
+@keyframes sectionSlideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* Example common styles for headers and sections */
+.page-header, .about-header, .contact-header, .services-header {
+  animation: advancedFadeIn 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.about-header {
+  max-width: 40ch;
+  margin: 0 auto;
+}
+main section {
+  animation: sectionSlideUp 1s ease-out both;
+  margin: 0 auto;
+}
+main > section {
+  margin: 2rem auto; /* adjust the value as needed */
+}
+/* Additional styling can be added here for a more amazing look */
+/* e.g. smoother transitions, hover effects, etc. */
+.button {
+  transition: background 0.3s ease;
+}
+.button:hover {
+  background: linear-gradient(90deg, hsl(200, 80%, 60%), hsl(340, 80%, 60%));
+}
+
+@media (max-width: 768px) {
+  /* For mobile devices */
+  main {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+}
+
+@media (min-width: 769px) {
+  /* For tablets and desktops */
+  main {
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  header h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 8rem);
+  }
+}
